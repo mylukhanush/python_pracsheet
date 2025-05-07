@@ -147,4 +147,48 @@
 # for i in range(1,N+1):
 #     sum=sum + a*2
 #     a=a*2
-# print("sum of series: ",sum)g
+# print("sum of series: ",sum)
+
+#Different types of parameters in python
+# def print_params(x,y,z=3,*pospar,**keypar):
+#     print(x,y,z)
+#     print(pospar)
+#     print(keypar)
+# print_params(1,2,3,5,6,7,foo=1, bar=2)
+# print_params(1,2)
+# print_params(1,2,3,'Testing', foo=1, bar=2)
+
+#Operator overloading in python
+# class Point:
+#     def __init__(self,x=0,y=0):
+#         self.x = x
+#         self.y = y
+#     def __add__(self, other):
+#         return Point(self.x + other.x, self.y * other.y)
+#     def __mul__(self, other):
+#         if isinstance(other, Point):
+#             return Point(self.x * other.x, self.y * other.y)
+#         else:
+#             return Point(self.x * other, self.y * other)
+#     def __rmul__(self,other):
+#         return Point(self.x * other, self.y * other)
+#     def __repr__(self):
+#         return ("{0},{1}".format(self.x,self.y))
+# p1 = Point(2,3)
+# p2 = Point(3,4)
+#
+# print(p1 + p2)
+# print(p1 * p2)
+
+#File Handling in Python
+#File handling refers to the process of performing operations on
+# a file such as creating, opening, reading, writing and closing it
+# try:
+#     fhand = open('jatin pg.txt')
+#     print(fhand)
+# except FileNotFoundError:
+#     print("Enter The File Name....")
+# fhand = open('mbox-short.txt')
+# inp = fhand.read()
+# print(len(inp))
+# print(inp[:20])
